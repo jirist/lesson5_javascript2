@@ -250,10 +250,7 @@ function calculateTax(){
 }//end of calculateTax function  
       
 
-          
-          
-          
-          
+
 /***********************************************************************************************  
 *   Purpose of the clearButton method:  
 *   This method is executed when the 'Clear Calculator' button is clicked.  It removes the tax 
@@ -279,16 +276,14 @@ function clearButton () {
               //This code removes the taxable income the user entered in the textfield.
               document.getElementById("incomeInput").value = "";
               
-              
-              
               //This code resets the dropdown box to the "Single" filer status.
               document.getElementById("filingStatus").selectedIndex = 0;
               
-             //INSERT YOUR CODE BELOW
-
-
-
-
-
+              //INSERT YOUR CODE BELOW
+             
+              document.getElementById("taxEstimate").innerHTML = "";
+              document.getElementById("taxBracket").innerHTML = "";
+             
+             
 }//end of clearButton function
       
