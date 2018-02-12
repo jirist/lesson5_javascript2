@@ -224,10 +224,7 @@ function calculateTax(){
  
           }//end of head of household calculation
           
-          
-          
-          
-          
+
           /***************************************************************************************
            * Explanation of Code:
            *                This section of the code displays the result for the taxes calculated
