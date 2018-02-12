@@ -115,8 +115,6 @@ function calculateTax(){
           }//end of married file jointly calculation
           
           
-          
-          
           /*******************************************************************************
             * Task 2:  Compute the tax for users' who file as "Married Separately".  Also,
             *          set (or initialize) the tax rate for each bracket. Refer 
@@ -130,12 +128,44 @@ function calculateTax(){
           *******************************************************************************/
                  
                  
-                 
           else if(status == 2) {
-                //INSERT YOUR CODE BELOW
-
-             
-             
+              
+            // Compute tax for Married filing separately
+               if (income <= 9525){
+                 tax = income * 0.10;
+                 taxRate = 10;
+               }//end of nested if
+               else if (income <= 38700) {
+                 tax = 9525 * 0.10 + (income - 9525) * 0.12;
+                 taxRate = 12;
+               }//end of else if
+               else if (income <= 82500) {
+                 tax = 9525 * 0.10 + (38700 - 9525) * 0.12 + (income - 38700) * 0.22;
+                 taxRate = 22;
+               } //end of else if
+               else if (income <= 157500) {
+                 tax = 9525 * 0.10 + (38700 - 9525) * 0.12 +
+                       (82500 - 38700) * 0.22 + (income - 82500) * 0.24;
+                 taxRate = 24;
+               }//end of else if
+               else if (income <= 200000) {
+                 tax = 9525 * 0.10 + (38700 - 9525) * 0.12 +
+                       (82500 - 38700) * 0.22 + (157500 - 82500) * 0.24 +
+                       (income - 157500) * 0.32;
+                 taxRate = 32;
+               }//end of else if
+               else if (income <= 300000) {
+                  tax = 9525 * 0.10 + (38700 - 9525) * 0.12 +
+                        (82500 - 38700) * 0.22 + (157500 - 82500) * 0.24 +
+                        (200000 - 157500) * 0.32 + (income - 200000) * 0.35;
+                  taxRate = 35;
+               }//end of else if
+               else {
+                  tax = 9525 * 0.10 + (38700 - 9525) * 0.12 +
+                        (82500 - 38700) * 0.22 + (157500 - 82500) * 0.24 +
+                        (200000 - 157500) * 0.32 + (300000 - 200000 ) * 0.35 + (income - 300000) * .37;
+	           taxRate = 37;
+               } //end of nested if
              
           }//end of married file separately calculation
         
