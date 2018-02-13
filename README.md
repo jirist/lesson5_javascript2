@@ -10,7 +10,7 @@ February 12, 2018
 Jiri Stanc
 
 ### Project Description:
-(In your own words, briefly describe the assignment.)
+Using javascript based application template, the purpose of this assignment is to further develop our knowledge of JavaScript fundamentals by utilizing conditional statements.
 
 ### View Project:
 https://jirist.github.io/lesson5_javascript2/
