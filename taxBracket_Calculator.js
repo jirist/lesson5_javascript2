@@ -55,7 +55,7 @@ function calculateTax(){
                         (82500 - 38700) * 0.22 + (157500 - 82500) * 0.24 +
                         (200000 - 157500) * 0.32 + (500000 - 200000 ) * 0.35 + (income - 500000) * .37;
                   taxRate = 37;
-               }//end of nested if
+               } //end of nested if
                
           }//end of single filer calculation
           
@@ -280,7 +280,6 @@ function clearButton () {
               document.getElementById("filingStatus").selectedIndex = 0;
               
               //INSERT YOUR CODE BELOW
-             
               document.getElementById("taxEstimate").innerHTML = "";
               document.getElementById("taxBracket").innerHTML = "";
              
